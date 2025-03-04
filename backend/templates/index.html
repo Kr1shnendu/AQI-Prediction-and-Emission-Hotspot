@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Index Prediction</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #96f166, #e27648);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: white;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 320px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            border-radius: 8px;
+            height: 35px;
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            height: 45px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+            background-color: #007bb5;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #005f8d;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Air Quality Index Prediction</h1>
+    <div class="container">
+        <form action="/predict" method="post">
+            <label for="CO">CO:</label>
+            <input type="text" id="CO" name="CO" required>
+
+            <label for="Ozone">Ozone:</label>
+            <input type="text" id="Ozone" name="Ozone" required>
+
+            <label for="PM10">PM10:</label>
+            <input type="text" id="PM10" name="PM10" required>
+
+            <label for="PM25">PM2.5:</label>
+            <input type="text" id="PM25" name="PM25" required>
+
+            <label for="NO2">NO2:</label>
+            <input type="text" id="NO2" name="NO2" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+
+</html>
